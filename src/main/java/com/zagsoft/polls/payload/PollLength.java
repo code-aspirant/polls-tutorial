@@ -1,8 +1,13 @@
 package com.zagsoft.polls.payload;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 
+@Getter
+@Setter
 public class PollLength {
     @NotNull
     @Max(7)
@@ -11,20 +16,4 @@ public class PollLength {
     @NotNull
     @Max(23)
     private Integer hours;
-
-    public Integer getDays() {
-        return days;
-    }
-
-    public void setDays(Integer days) {
-        this.days = days;
-    }
-
-    public Integer getHours() {
-        return hours;
-    }
-
-    public void setHours(Integer hours) {
-        this.hours = hours;
-    }
 }
