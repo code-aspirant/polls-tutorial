@@ -1,6 +1,7 @@
 package com.zagsoft.polls.payload;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.zagsoft.polls.user.UserSummary;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

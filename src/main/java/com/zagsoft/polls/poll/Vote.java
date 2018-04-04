@@ -17,6 +17,10 @@ public class Vote {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "choice_id", nullable = false)
+    private Choice choice;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     public Long getId() {
@@ -33,6 +37,14 @@ public class Vote {
 
     public void setPoll(Poll poll) {
         this.poll = poll;
+    }
+
+    public Choice getChoice() {
+        return choice;
+    }
+
+    public void setChoice(Choice choice) {
+        this.choice = choice;
     }
 
     public User getUser() {

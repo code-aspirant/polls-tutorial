@@ -22,6 +22,10 @@ public class Choice {
 
     public Choice() {}
 
+    public Choice(String text) {
+        this.text = text;
+    }
+
     public Long getId() {
         return id;
     }

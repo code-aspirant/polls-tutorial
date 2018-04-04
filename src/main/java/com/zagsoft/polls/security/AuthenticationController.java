@@ -30,17 +30,10 @@ import java.util.Collections;
 @RestController
 @RequestMapping("/auth")
 public class AuthenticationController {
-
-    private static final Logger logger = LogManager.getLogger(AuthenticationManager.class);
-
     private final AuthenticationManager authenticationManager;
-
     private final UserRepository userRepository;
-
     private final RoleRepository roleRepository;
-
     private final PasswordEncoder passwordEncoder;
-
     private final JwtTokenProvider tokenProvider;
 
     @Autowired
@@ -56,15 +49,11 @@ public class AuthenticationController {
         this.tokenProvider = tokenProvider;
     }
 
-    @GetMapping("/test")
-    public String test() {
-        return "Test Successful";
-    }
+    private static final Logger logger = LogManager.getLogger(AuthenticationController.class);
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
         logger.info(">> In sign in method");
-
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.getUsernameOrEmail(),

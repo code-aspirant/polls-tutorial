@@ -1,4 +1,4 @@
-package com.zagsoft.polls.payload;
+package com.zagsoft.polls.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

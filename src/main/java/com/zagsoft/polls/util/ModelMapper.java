@@ -2,9 +2,9 @@ package com.zagsoft.polls.util;
 
 import com.zagsoft.polls.payload.ChoiceResponse;
 import com.zagsoft.polls.payload.PollResponse;
-import com.zagsoft.polls.payload.UserSummary;
 import com.zagsoft.polls.poll.Poll;
 import com.zagsoft.polls.user.User;
+import com.zagsoft.polls.user.UserSummary;
 
 import java.time.Instant;
 import java.util.List;

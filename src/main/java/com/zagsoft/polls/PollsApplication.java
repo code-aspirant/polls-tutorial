@@ -19,7 +19,7 @@ import java.util.TimeZone;
 public class PollsApplication {
 
 	@PostConstruct
-	void inti() {
+	void init() {
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 	}
 
